@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template n8n Prospecção IA - Automatize por R$17</title>
+    <meta name="description" content="Pare de perder tempo com prospecção manual. Template pronto para n8n que gera leads, valida contatos e agenda reuniões automaticamente por apenas R$17.">
+    <meta name="author" content="Automação Pro">
+    <meta name="keywords" content="n8n, automação, prospecção, IA, leads, vendas, template">
+    
+    <meta property="og:title" content="Template n8n Prospecção IA - Automatize por R$17">
+    <meta property="og:description" content="Template pronto para n8n que gera leads, valida contatos e agenda reuniões automaticamente. Acesso imediato por R$17.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://template-prospeccao.com/og-image.jpg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: hsl(217, 91%, 25%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            --primary-light: hsl(217, 91%, 35%);
+            --primary-dark: hsl(217, 91%, 15%);
+            --secondary: hsl(210, 100%, 97%);
+            --secondary-foreground: hsl(217, 91%, 25%);
+            --muted: hsl(210, 20%, 96%);
+            --muted-foreground: hsl(210, 10%, 45%);
+            --accent: hsl(208, 100%, 50%);
+            --accent-foreground: hsl(0, 0%, 100%);
+            --accent-light: hsl(208, 100%, 60%);
+            --success: hsl(142, 76%, 36%);
+            --success-foreground: hsl(0, 0%, 100%);
+            --border: hsl(210, 20%, 90%);
+            --background: hsl(0, 0%, 100%);
+            --foreground: hsl(210, 40%, 15%);
+            --card: hsl(0, 0%, 100%);
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, hsl(217, 91%, 20%) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, hsl(217, 91%, 30%, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(208, 100%, 50%, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, hsl(217, 91%, 20%, 0.3) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 4xl;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 3xl;
+            padding: 0 1rem;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, hsl(208, 100%, 50%) 0%, hsl(208, 100%, 60%) 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 0 40px hsl(208, 100%, 50%, 0.3);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 28rem;
+            animation: bounceIn 0.8s ease-out;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.15), 0 0 60px hsl(208, 100%, 50%, 0.4);
+        }
+
+        .hero-features {
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-gradient {
+            background: linear-gradient(180deg, var(--background) 0%, var(--secondary) 100%);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--foreground);
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            text-align: center;
+            color: var(--muted-foreground);
+            max-width: 3xl;
+            margin: 0 auto 4rem;
+        }
+
+        /* Problem Section */
+        .problem-content {
+            text-align: center;
+            max-width: 4xl;
+            margin: 0 auto;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card);
+            border-radius: 0.75rem;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .problem-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* How It Works */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            background: var(--accent);
+            color: var(--accent-foreground);
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--foreground);
+        }
+
+        .step-description {
+            color: var(--muted-foreground);
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--card);
+            border-radius: 0.75rem;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            color: var(--success);
+            font-size: 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Comparison */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .comparison-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .comparison-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .comparison-list {
+            list-style: none;
+            space-y: 0.75rem;
+        }
+
+        .comparison-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Offer */
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 5xl;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .offer-card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 2px solid var(--border);
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .offer-card.featured {
+            border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(0, 123, 255, 0.2);
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--accent-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .offer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--foreground);
+        }
+
+        .offer-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .offer-description {
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+        }
+
+        .offer-features {
+            margin-bottom: 2rem;
+        }
+
+        .offer-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .offer-button {
+            width: 100%;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .offer-button.primary {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: white;
+            border: none;
+            box-shadow: 0 0 40px rgba(0, 123, 255, 0.3);
+        }
+
+        .offer-button.secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .offer-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 4xl;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.5rem;
+            text-align: left;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--muted-foreground);
+            display: none;
+        }
+
+        .faq-answer.open {
+            display: block;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, var(--primary), var(--primary-dark), var(--primary));
+            opacity: 0.9;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 4xl;
+            margin: 0 auto;
+        }
+
+        .final-cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            padding: 0 1rem;
+        }
+
+        .final-cta-subtitle {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            padding: 0 1rem;
+        }
+
+        .final-cta-button {
+            background: linear-gradient(135deg, hsl(208, 100%, 50%) 0%, hsl(208, 100%, 60%) 100%);
+            color: white;
+            padding: 1.5rem 2rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 32rem;
+            margin: 0 auto 3rem;
+        }
+
+        .final-cta-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .final-cta-feature {
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        .final-cta-feature-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .final-cta-feature-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .final-cta-feature-description {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .final-cta-guarantee {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+            .section-title {
+                font-size: 3rem;
+            }
+            .final-cta-title {
+                font-size: 2.5rem;
+            }
+            .final-cta-subtitle {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            .section-title {
+                font-size: 3.5rem;
+            }
+            .final-cta-title {
+                font-size: 3rem;
+            }
+            .final-cta-subtitle {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Pare de perder tempo com prospecção manual. 
+                    <span style="color: hsl(208, 100%, 60%);">Automatize hoje mesmo por apenas R$17!</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Um template pronto para rodar no n8n, que gera leads, valida contatos 
+                    e agenda reuniões automaticamente.
+                </p>
+                
+                <button class="cta-button">
+                    👉 Quero meu template agora por R$17
+                </button>
+                
+                <div class="hero-features">
+                    ⚡ Acesso imediato • 🔧 Plug-and-play • 💰 Garantia de 7 dias
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <div class="problem-content">
+                <h2 class="section-title">
+                    Ainda não conseguiu vender seu projeto de automação porque não tem clientes suficientes?
+                </h2>
+                <p class="section-subtitle">
+                    O problema não é sua oferta. É a sua prospecção ativa que não acontece todos os dias.
+                </p>
+                
+                <div class="problem-grid">
+                    <div class="problem-item">
+                        <div class="problem-icon">❌</div>
+                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Perde horas procurando contatos</h3>
+                        <p style="color: var(--muted-foreground);">Tempo valioso desperdiçado em busca manual</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">❌</div>
+                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Envia poucas mensagens por semana</h3>
+                        <p style="color: var(--muted-foreground);">Volume insuficiente para gerar resultados</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">❌</div>
+                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Fica refém da sorte</h3>
+                        <p style="color: var(--muted-foreground);">Sem processo consistente e previsível</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-gradient">
+        <div class="container">
+            <h2 class="section-title">Como funciona em <span style="color: var(--primary);">6 etapas simples</span></h2>
+            <p class="section-subtitle">
+                Processo técnico e direto, do lead à reunião agendada
+            </p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Busca Contatos no Google Maps</h3>
+                    <p class="step-description">
+                        O fluxo inicia fazendo a varredura no Google Maps, identificando empresas relevantes para o seu nicho.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Preenche Instantâneo na Planilha</h3>
+                    <p class="step-description">
+                        Todos os dados capturados (nome da empresa, telefone, endereço, etc.) são enviados em tempo real para uma planilha organizada.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Cadastro Automático no Supabase</h3>
+                    <p class="step-description">
+                        O template integra direto com o Supabase, armazenando os leads em um banco de dados escalável e pronto para consultas.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Envio de Mensagens a Cada 10 Minutos</h3>
+                    <p class="step-description">
+                        A automação dispara uma nova mensagem para cada lead a cada 10 minutos, garantindo cadência de prospecção constante.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3 class="step-title">Fluxo de Validação com Agente Principal</h3>
+                    <p class="step-description">
+                        O lead cai no fluxo do agente de IA que qualifica, separando contatos frios de oportunidades reais.
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h3 class="step-title">Agendamento Automático no Google Calendar</h3>
+                    <p class="step-description">
+                        Quando o lead é validado, a reunião é marcada automaticamente na sua agenda do Google, sem esforço manual.
+                    </p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--card); border-radius: 0.75rem; border: 2px solid var(--accent);">
+                <p style="font-size: 1.25rem; font-weight: 600; color: var(--primary);">
+                    <strong>Resultado:</strong> um processo de prospecção ponta a ponta, 100% automatizado, desde a captação até o agendamento de reunião.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Benefícios <span style="color: var(--primary);">além do óbvio</span></h2>
+            <p class="section-subtitle">
+                Vantagens que seus concorrentes não imaginam
+            </p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="benefit-icon">✅</span>
+                    <div>
+                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Mais tempo para focar em fechar vendas</h3>
+                        <p style="color: var(--muted-foreground);">Elimine tarefas repetitivas e dedique-se ao que realmente gera receita</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">✅</span>
+                    <div>
+                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Processo previsível sem depender da sorte</h3>
+                        <p style="color: var(--muted-foreground);">Sistema consistente que funciona 24/7, mesmo enquanto você dorme</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">✅</span>
+                    <div>
+                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Escalável: quanto mais rodando, mais contatos</h3>
+                        <p style="color: var(--muted-foreground);">Multiplique seus resultados sem aumentar proporcionalmente o esforço</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="benefit-icon">✅</span>
+                    <div>
+                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Gera autoridade frente aos concorrentes</h3>
+                        <p style="color: var(--muted-foreground);">Demonstre na prática seu domínio em automação para prospects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section section-gradient">
+        <div class="container">
+            <h2 class="section-title">Manual vs <span style="color: var(--primary);">Automação</span></h2>
+            <p class="section-subtitle">
+                Veja a diferença na prática
+            </p>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3 class="comparison-title" style="color: var(--destructive);">Prospecção Manual</h3>
+                    <ul class="comparison-list">
+                        <li class="comparison-item">
+                            <span style="color: var(--destructive);">❌</span>
+                            <span>Horas no Google procurando contatos</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span style="color: var(--destructive);">❌</span>
+                            <span>Poucas mensagens enviadas</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span style="color: var(--destructive);">❌</span>
+                            <span>Leads frios e aleatórios</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span style="color: var(--destructive);">❌</span>
+                            <span>Sem consistência</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span style="color: var(--destructive);">❌</span>
+                            <span>Depende do seu humor</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title" style="color: var(--success);">Com nosso Template n8n</h3>
+                    <ul class="comparison-list">
+                        <li class="comparison-item">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Busca automatizada no Google Maps</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Mensagens enviadas todos os dias</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Leads validados com IA</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Reuniões agendadas direto no Google Calendar</span>
+                        </li>
+                        <li class="comparison-item">
+                            <span style="color: var(--success);">✅</span>
+                            <span><strong>Até 10x mais chances de fechar vendas</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Escolha como <span style="color: var(--primary);">começar hoje mesmo</span></h2>
+            <p class="section-subtitle">
+                Duas opções para você começar a automatizar sua prospecção agora
+            </p>
+            
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <h3 class="offer-title">Template para importar</h3>
+                    <div class="offer-price">R$17</div>
+                    <p class="offer-description">Você mesmo instala, simples e barato!</p>
+                    
+                    <div class="offer-features">
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Template completo do n8n</span>
+                        </div>
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Documentação detalhada</span>
+                        </div>
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Suporte por 30 dias</span>
+                        </div>
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Acesso imediato</span>
+                        </div>
+                    </div>
+                    
+                    <button class="offer-button secondary">Comprar agora</button>
+                </div>
+                
+                <div class="offer-card featured">
+                    <div class="offer-badge">MAIS POPULAR</div>
+                    <h3 class="offer-title">Template + Instalação Completa</h3>
+                    <div class="offer-price">R$297</div>
+                    <p class="offer-description">A gente instala tudo pra você, zero esforço!</p>
+                    
+                    <div class="offer-features">
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Template completo do n8n</span>
+                        </div>
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Instalação completa</span>
+                        </div>
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Configuração personalizada</span>
+                        </div>
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Treinamento ao vivo</span>
+                        </div>
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Suporte por 90 dias</span>
+                        </div>
+                        <div class="offer-feature">
+                            <span style="color: var(--success);">✅</span>
+                            <span>Garantia de funcionamento</span>
+                        </div>
+                    </div>
+                    
+                    <button class="offer-button primary">Comprar agora</button>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--muted-foreground); margin-bottom: 1rem;">
+                    💳 Pagamento seguro • 🔒 Garantia de 7 dias • ⚡ Acesso imediato
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-gradient">
+        <div class="container">
+            <h2 class="section-title">Perguntas <span style="color: var(--primary);">Frequentes</span></h2>
+            <p class="section-subtitle">
+                Tire suas principais dúvidas
+            </p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Preciso saber programar?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não, basta importar no n8n. É plug-and-play. O template vem pronto para usar, você só precisa configurar suas credenciais.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>O que é n8n?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Uma ferramenta open-source poderosa para criar automações sem código. É como o Zapier, mas muito mais flexível e gratuito.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Preciso pagar algo além do template?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não, apenas o valor do template. O n8n é gratuito. Só paga extra se quiser a instalação completa por R$297.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Funciona em qualquer computador?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, desde que o n8n esteja rodando (Windows, Mac, Linux). Funciona também em servidores na nuvem.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Posso personalizar as mensagens?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, você pode editar os textos de acordo com seu público. O template é totalmente customizável.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>E se eu não conseguir instalar sozinho?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Temos a opção com instalação completa por R$297. Nossa equipe instala e configura tudo para você.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2 class="final-cta-title">
+                    Se você ainda não fechou clientes de automação, 
+                    <span style="color: hsl(208, 100%, 60%);">esse template vai mudar o jogo.</span>
+                </h2>
+                
+                <p class="final-cta-subtitle">
+                    Por apenas R$17 você tem acesso imediato e pode começar a gerar leads HOJE. 
+                    Clique abaixo e garanta o seu agora.
+                </p>
+                
+                <button class="final-cta-button">
+                    👉 Quero meu template agora por R$17
+                </button>
+                
+                <div class="final-cta-features">
+                    <div class="final-cta-feature">
+                        <div class="final-cta-feature-icon">⚡</div>
+                        <p class="final-cta-feature-title">Acesso Imediato</p>
+                        <p class="final-cta-feature-description">Receba em minutos</p>
+                    </div>
+                    <div class="final-cta-feature">
+                        <div class="final-cta-feature-icon">🔧</div>
+                        <p class="final-cta-feature-title">Plug-and-Play</p>
+                        <p class="final-cta-feature-description">Fácil de instalar</p>
+                    </div>
+                    <div class="final-cta-feature">
+                        <div class="final-cta-feature-icon">💰</div>
+                        <p class="final-cta-feature-title">Garantia 7 dias</p>
+                        <p class="final-cta-feature-description">Risco zero</p>
+                    </div>
+                </div>
+                
+                <div class="final-cta-guarantee">
+                    <p style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">
+                        🔥 Oferta por tempo limitado
+                    </p>
+                    <p style="opacity: 0.9;">
+                        Preço promocional válido apenas para os primeiros 100 clientes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('span:last-child');
+            
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                // Fechar todos os outros FAQs
+                document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
+                    openAnswer.classList.remove('open');
+                    openAnswer.previousElementSibling.querySelector('span:last-child').textContent = '+';
+                });
+                
+                answer.classList.add('open');
+                icon.textContent = '-';
+            }
+        }
+
+        // Adicionar evento de clique para todos os botões CTA
+        document.querySelectorAll('.cta-button, .final-cta-button, .offer-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Aqui você pode adicionar o link de compra real
+                window.open('https://pay.hotmart.com/SEU_LINK_AQUI', '_blank');
+            });
+        });
+
+        // Animações ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animação
+        document.querySelectorAll('.step-card, .benefit-item, .comparison-card, .offer-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
